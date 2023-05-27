@@ -1,0 +1,388 @@
+:root {
+    --nav: rgb(36, 41, 47);
+    --body: rgb(255, 255, 255);
+    --search: rgb(87, 96, 106);
+    --searchInside: rgb(200, 201, 203);
+    --placeHolder : rgba(255, 255, 255, 0.75);
+  }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    line-height: 1.5;
+    background-color: var(--body);
+  }
+  
+  header {
+    width: 100%;
+    position: relative;
+  }
+
+  header .burgerMenu {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    right: 20px;
+    top: 25%;
+    display: none;
+  }
+  
+  header .burgerMenu span {
+    border-radius: 5px;
+    display: inline-block;
+    height: 4px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+    z-index: 1;
+  }
+
+  #check {
+    position: absolute;
+    display: none;
+  }
+  
+  header nav {
+    width: 100%;
+    height: 100%;
+    background-color: var(--nav);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 1em 2em;
+  }
+  
+  .leftSide {
+    min-width: 75%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  
+  .leftSide i {
+    font-size: 33px;
+    padding-right: 0.5em;
+  }
+  
+  .leftSide .box {
+    width: 30%;
+    height: 32px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    background-color: var(--nav);
+    border: 1px solid var(--search);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+  }
+  
+  .searchSpace::placeholder {
+    /* هاي عشان تصل للبليس هولدر يلي جوا يا معلم */
+    color: rgba(255, 255, 255, 0.75);
+  }
+  
+  .leftSide .box .fa-magnifying-glass {
+    font-size: 14px;
+    position: absolute;
+    color: var(--search);
+  }
+  
+  .leftSide .searchSpace {
+    padding-left: 0.1em;
+    width: 90%;
+    height: 100%;
+    border: none;
+    outline: none;  /* هاي الخاصية يلي بتشيل البوردر الخارجي يا حمودة */
+    background-color: var(--nav);
+    border-radius: 7px;
+    margin-left: 1.5em;
+    color: white;
+    font-size: 14px;
+  }
+  
+  .leftSide ul {
+    height: 100%;
+    padding-left: 2em;
+    display: flex;
+    font-size: 1em;
+  }
+  
+  .leftSide ul li {
+    height: 100%;
+    list-style: none;
+    margin-right: 1em;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9em;
+  }
+  
+  .leftSide ul li:hover {
+    color: rgb(181, 176, 176);
+  }
+  
+  .rightSide {
+    width: 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .rightSide .small-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .rightSide .small-pic img {
+    border-radius: 50%;
+    padding-right: 0.2em;
+    width: 25px;
+  }
+  
+  .plus .fa-plus {
+    padding-right: 0.2em;
+  }
+
+  /* Start Of Main */
+
+  main {
+    height: auto; /* هاي يعني بتخلي الفوتر تحت اجباري اما لو اعطيتها 80vh هون راح يخرب الفوتر  */
+
+  }
+
+  main .searchBoxes {
+    min-height: 10vh;
+    border-bottom: 1px solid rgb(64, 63, 63);
+    padding-top: 2em;
+    padding-bottom: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    
+  }
+
+  .btn {
+  width: 300px;
+  height: 300px;
+  border: 1px solid var(--nav);
+  background-color: rgb(242, 242, 242);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  box-shadow: 0px 3px 7px 1px;
+  }
+
+  .event {
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    border: 1px solid var(--search);
+    border-radius: 6px;
+    background-image: linear-gradient(to bottom right, rgb(75, 77, 79) , rgb(206, 204, 204));
+    color: var(--placeHolder); 
+    cursor: pointer;
+  }
+
+  .firstSearch input , .secondSearch input {
+    background-color: rgb(0, 0, 0 , 30%);
+    padding: 0.5em;
+    border-radius: 6px;
+    font-size: 1.1em;
+    margin-bottom: 1em;
+  }
+
+  .firstSearch , .secondSearch {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .firstName , .secondName {
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+
+  /* Results */
+
+  .sec2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 6em;
+    padding-top: 1em;
+  }
+
+  .Result {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Result img {
+    width: 500px;
+
+  }
+
+
+#finalResult {
+  font-size: 1.5em;
+}
+
+
+  /* Start of footer */
+
+  footer {
+    height: 10vh;
+    padding-left: 5em;
+    padding-right: 5em;    
+}
+
+footer hr {
+    margin-bottom: 10px;
+}
+
+.foot_Main {
+    width: 100%;
+    display: flex;
+}
+
+.copy_rights {
+    display: flex;
+    align-items: center;
+    width: 15%;
+}
+
+.copy_rights svg {
+    margin-right: 5px;
+}
+
+.reserved {
+    color: #656d76;
+}
+
+
+.foot_Links a {
+    padding: 0 1em;
+    color:  #0969da;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.foot_Links a:hover {
+    text-decoration: underline;
+}
+
+
+/* Media Query */
+
+@media (max-width:1286px) {
+  .foot_Main {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+  }
+
+  .copy_rights  {
+    width: auto;
+  }
+}
+
+
+@media (max-width:1050px) {
+  .leftSide  {
+    width: 81%;
+  }
+
+  .leftSide ul {
+    font-size: 0.8em;
+  }
+
+  .rightSide {
+    width: 12%;
+  }
+
+
+  /* .Repose */ 
+  main .Repos {
+    padding-left: 2.5em;
+  }
+}
+
+
+
+@media (max-width:872px) {
+
+  .leftSide .box {
+    width: 45%;
+  }
+
+  .leftSide ul {
+    display: none;
+  }
+
+  .rightSide {
+    display: none;
+  }
+
+  header .burgerMenu {
+    display: flex;
+  }
+}
+
+
+@media (max-width:535px) {
+
+  .firstSearch , .secondSearch {
+    padding-bottom: 1em;
+    justify-content: center;
+    align-items: center;
+  }
+  .searchBoxes .btn {
+    margin-top: 1em;
+  }
+
+  .Result img {
+    width: 400px;
+  }
+}
+
+@media (max-width:415px) {
+
+  .firstSearch , .secondSearch {
+    width: 95%;
+  }
+  .btn {
+    width: 200px;
+    height: 200px;
+    padding: 1em;
+    text-align: center;
+  }
+
+  .Result img {
+    width: 250px;
+  }
+}
+
+@media (max-width:300px) {
+  html {
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,546 @@
+:root {
+  --nav: rgb(36, 41, 47);
+  --body: rgb(255, 255, 255);
+  --search: rgb(87, 96, 106);
+  --searchInside: rgb(200, 201, 203);
+  --placeHolder : rgba(255, 255, 255, 0.75);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.5;
+  background-color: var(--body);
+}
+
+header {
+  width: 100%;
+  position: relative;
+}
+
+header .burgerMenu {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  right: 20px;
+  top: 25%;
+  display: none;
+}
+
+header .burgerMenu span {
+  border-radius: 5px;
+  display: inline-block;
+  height: 4px;
+  width: 100%;
+  background-color: white;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+
+#check {
+  position: absolute;
+  display: none;
+}
+
+
+
+
+header nav {
+  width: 100%;
+  height: 100%;
+  background-color: var(--nav);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 1em 2em;
+}
+
+.leftSide {
+  min-width: 85%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.leftSide i {
+  font-size: 33px;
+  padding-right: 0.5em;
+}
+
+.leftSide .box {
+  width: 30%;
+  height: 32px;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  background-color: var(--nav);
+  border: 1px solid var(--search);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+}
+
+.searchSpace::placeholder {
+  /* هاي عشان تصل للبليس هولدر يلي جوا يا معلم */
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.leftSide .box .fa-magnifying-glass {
+  font-size: 14px;
+  position: absolute;
+  color: var(--search);
+}
+
+.leftSide .searchSpace {
+  padding-left: 0.1em;
+  width: 90%;
+  height: 100%;
+  border: none;
+  outline: none;  /* هاي الخاصية يلي بتشيل البوردر الخارجي يا حمودة */
+  background-color: var(--nav);
+  border-radius: 7px;
+  margin-left: 1.5em;
+  color: white;
+  font-size: 14px;
+}
+
+.leftSide ul {
+  height: 100%;
+  padding-left: 2em;
+  display: flex;
+  font-size: 1em;
+}
+
+.leftSide ul li , .leftSide ul .compare a {
+  height: 100%;
+  list-style: none;
+  margin-right: 1em;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9em;
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+
+.leftSide ul li:hover {
+  color: rgb(181, 176, 176);
+}
+
+.rightSide {
+  width: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rightSide .small-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rightSide .small-pic img {
+  border-radius: 50%;
+  padding-right: 0.2em;
+  width: 25px;
+}
+
+.plus .fa-plus {
+  padding-right: 0.2em;
+}
+/* <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" aria-hidden="true" class="mr-1"><path fill="none" stroke="#979A9C" opacity=".4" d="M3.5.5h12c1.7 0 3 1.3 3 3v13c0 1.7-1.3 3-3 3h-12c-1.7 0-3-1.3-3-3v-13c0-1.7 1.3-3 3-3z"></path><path fill="#979A9C" d="M11.8 6L8 15.1h-.9L10.8 6h1z"></path></svg> */
+
+
+/*-------------- Start Of Main Sections ------------*/
+
+
+main {
+    width: 100%;
+    height: 80vh;
+    display:flex;
+    flex-direction: column;
+}
+.links {
+    width: 100%;
+    border-bottom: 1px solid rgb(87, 96, 106, 35%);
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+ .links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    padding:10px;
+    border-radius: 6px;
+}
+
+.links a:hover {
+    background-color: rgb(240, 242, 244);
+}
+
+
+.links a svg {
+    margin-right: 0.2em;
+    font-size: 40px;
+    opacity: 50%;
+}
+
+.links a .Repositories {
+    font-size: 13px;
+    margin-left: 10px;
+    padding: 0 3px;
+    background-color: rgb(233, 233, 233);
+    border-radius: 50%;
+}
+
+
+/*-------------- Start Of Repo. Section ------------*/
+
+.Repos {
+    display: flex;
+    padding-left: 10em;
+}
+
+.imgCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+}
+
+.followBtn {
+  width: 100%;
+}
+
+.followBtn button {
+  width: 100%;
+}
+
+.imgCol img {
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
+    border: 2px solid rgb(87, 96, 106 , 50%);
+    box-shadow: 0 0 1px rgba(31,35,40,0.15);
+    position: relative;
+    top: -5%;
+}
+
+.imgCol h2 {
+    font-weight: 200;
+    opacity: 50%;
+    margin-bottom: 10px;
+}
+
+.imgCol button {
+    padding: 0.7em;
+    font-size: 0.9em;
+    font-weight: 600;
+    background-color: rgb(246, 248, 250);
+    border-radius: 6px;
+    border: 1px solid var(--search);
+    margin-bottom: 10px;
+    cursor: pointer;
+
+}
+
+/* Cards */
+
+
+.links {
+  height: 20%;
+}
+
+.Repos {
+  height: 85%;
+}
+
+
+.container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 0.5em;
+    gap: 1em;
+    height: 90%;
+}
+
+.cards {
+    display: flex;
+    width: 100%;
+    column-gap: 1em;
+}
+
+.first_col_cards , .Second_col_cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 50%;
+}
+
+/* 16px */
+
+.first_col_cards .repos-Card , .Second_col_cards .repos-Card {
+    padding: 16px;
+    border: 1px solid rgb(208, 215, 222);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 1em;
+}
+
+.first_col_cards .repos-Card a , .Second_col_cards .repos-Card a {
+    text-decoration: none;
+    color: blue;
+}
+
+.first_col_cards .repos-Card a:hover , .Second_col_cards .repos-Card a:hover {
+    text-decoration: underline;
+}
+
+
+.dot_title {
+    display: flex;
+    align-items: center;
+}
+.repos-Card .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #e34c26;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 2px;
+}
+
+.repos-Card .status {
+    border: 1px solid rgb(208, 215, 222);
+    text-align: center;
+    font-size: 0.9em;
+    position: absolute;
+    right: 20px;
+    border: 2px solid #d0d7de;
+    padding: 0 7px;
+    font-weight: 500;
+    border-radius: 2em;
+} 
+
+
+/* Start Of Footer */
+
+footer {
+    height: 10vh;
+    padding-left: 5em;
+    padding-right: 5em;    
+}
+
+footer hr {
+    margin-bottom: 10px;
+}
+
+.foot_Main {
+    width: 100%;
+    display: flex;
+}
+
+.copy_rights {
+    display: flex;
+    align-items: center;
+    width: 15%;
+}
+
+.copy_rights svg {
+    margin-right: 5px;
+}
+
+.reserved {
+    color: #656d76;
+}
+
+.foot_Links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.foot_Links a {
+    padding: 0 1em;
+    color:  #0969da;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.foot_Links a:hover {
+    text-decoration: underline;
+}
+
+
+/*--------------- Media Query ----------------------*/
+
+@media (max-width:1286px) {
+  .foot_Main {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+  }
+
+  .copy_rights  {
+    width: auto;
+  }
+}
+
+
+
+@media (max-width:1050px) {
+  .leftSide  {
+    width: 81%;
+  }
+
+  .leftSide ul {
+    font-size: 0.8em;
+  }
+
+  .rightSide {
+    width: 12%;
+  }
+
+
+  /* .Repose */ 
+  main .Repos {
+    padding-left: 2.5em;
+  }
+}
+
+@media (max-width:900px) {
+
+  main {
+    height: auto;
+  }
+  .Repos {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1em;
+  }
+
+  .imgCol img {
+    top:1%;  
+  }
+
+
+  .container {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width:872px) {
+
+  .leftSide .box {
+    width: 45%;
+  }
+
+  .leftSide ul {
+    display: none;
+  }
+
+  .rightSide {
+    display: none;
+  }
+
+  header .burgerMenu {
+    display: flex;
+  }
+}
+
+@media (max-width:700px) {
+  .links {
+    gap: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+}
+
+@media (max-width:608px) {
+
+  .container {
+    padding-left: 0px;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .first_col_cards, .Second_col_cards {
+    width: 100%;
+  }
+
+  
+}
+
+
+@media (max-width:512px) {
+  header .burgerMenu {
+    height: 35px;
+    width: 35px;
+  }
+  header .burgerMenu span {
+    height: 1px;
+  }
+
+  .leftSide .box {
+    width: 66%;
+  }
+}
+
+@media (max-width:512px) {
+  .imgCol img {
+    width: 220px; 
+    height: 220px;
+  }
+}
+
+
+@media (max-width:331px) {
+  html {
+    font-size: 11px;
+  }
+
+  .leftSide .searchSpace {
+    font-size: 10px;
+  }
+  main .Repos {
+    padding-left: 1.5em;
+  }
+}
+
+
